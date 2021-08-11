@@ -1,3 +1,34 @@
+# DOM
+Document Object Model 文件物件模型
+## Why do we learn DOM? 為什麼我們要學DOM?
+DOM能夠讓我們操作HTML的標籤
+
+## window Object
+window代表瀏覽器的視窗，也就是JavaScript運行的地方，當你打開瀏覽器(例如Chrome, Firefox, Edge)的時候它就存在了。
+
+window object是一個瀏覽器已經定義好的全域變數，有自己的methods和properties。
+
+## 常用的window object methods
+* alert()
+* prompt()
+* addEventListener()
+* clearInterval()
+* setInterval()
+
+## 常用的window object properties
+* console
+* Document
+* LocalStorage
+* SessionStorage
+
+更多可以看 [W3school - Window Object](https://www.w3schools.com/jsref/obj_window.asp)
+
+# What exactly is DOM
+
+* Document 是一個 Object，也是window object的其中一個屬性。
+* Document 的意思是 HTMLDocument
+* Model是指HTML元素都是物件，代表HTML元素都有自己的properties 和 methods
+
 ## document Object Model
 
 在 JavaScript 裡面，想要控制 HTML elements 的話，我們可以操作 DOM 來實現，因為每個 html element 都是一個物件，裡面已經有可以用的 properties 跟 methods。
