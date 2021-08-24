@@ -6,7 +6,7 @@
 
 假設變數是一個箱子，let / const / var 是三種箱子
 
-constant (n.) 常數 (adj.)不變的
+const = constant (n.)常數 (adj.)不變的
 
 ### re-assignment
 
@@ -78,63 +78,65 @@ JavaScript 不知道這個結果是什麼數字
 
 不在這六個裏面的都不是 Primitive Data Type(例如 Object)
 
-#typeof Operator 判斷型別運算
+## typeof Operator 判斷型別運算
 
-#Logical Operator 邏輯運算
+## Logical Operator 邏輯運算
 
-一定會回傳一個 Boolean 值
+- 邏輯運算代表一定會回傳一個 Boolean value 的結果
 
-== ===
-!= !==
+### 邏輯運算符號
 
-> < >= <=
+- `>` 左邊 大於 右邊
+- `<` 左邊 小於 右邊
+- `>=` 左邊 大於等於 右邊
+- `<=` 左邊 小於等於 右邊
+- `==` is comparing if the values are the same on both sides type is different, but value is the same 兩邊的**值**是否一樣
+- `===` is comparing if the values and type are the same both sides 兩邊的**值**與**資料型別**是否一樣
+- `!=` values are different 兩邊的**值**是否不一樣
+- `!==` values and types are different 兩邊的**值**與**資料型別**是否不一樣
 
-== is comparing if the values are the same on both sides
-type is different, but value is the same
+### and, or operator 且，或 運算
+假設 `A` 跟 `B` 為 Boolean value
+- `A && B` → 當 `A` 是 `true` 且 `B` 是 `true`，結果為 `true`（兩者true，結果true）
+- `A || B` → 當 `A` 是 `true` 或 `B` 是 `true`，結果為 `true`（其一true，結果true）
 
-=== is comparing if the values and type are the same both sides
+### if statement and condition syntax
 
-!= values are different
-!== vlues and types are different
-
-#and, or operator 且，或 運算
-A,B 為 Boolean value
-A && B => A 是 true 且 B 是 true
-A || B => A 是 true 或 B 是 true
-
-#if statement and condition syntax
-
-如果 條件成立 就做甚麼事情，否則 就做甚麼事情
+下列語法表示：如果 `條件成立` 就做甚麼事情 `否則` 就做甚麼事情
+```js
 if (condition) {
-
+  // doSomething....
 } else {
-
+  // doSomething....
 }
+```
 
-condition 都會變成 truthy and falsy value 來判斷
-如果要判斷是不是 NaN，就要用 isNaN()，因為不管用甚麼值去跟 NaN 比較，都會回傳 false
+- `condition` 都會變成 `truthy and falsy value` 來判斷
+- 如果要判斷是不是 `NaN` ，就要用 `isNaN()`，因為不管用甚麼值去跟 `NaN` 比較，都會回傳 `false`
 
-# Truthy and Falsy Values
+### Truthy and Falsy Values
 
-Falsy Value
+**Falsy Value** 是指下列這六個值：
 
-1. false
-2. 0
-3. "" => 空字串
-4. null
-5. undefined
-6. NaN
+1. `false`
+2. `0`
+3. `""`  空字串
+4. `null`
+5. `undefined`
+6. `NaN`
 
-這六個以外都是 truthy
+這六個以外都是 **Truthy value**
 
-# Variable Naming Convention 變數命名習慣
+
+
+## Variable Naming Convention 變數命名習慣
 
 非強制性，但是大家都這樣做
 camelCase 駝峰式命名 第一個單字小寫，之後的單字都大寫開頭
 underline 底線 第一個單字跟之後的單字中間都用底線來區分
 const with uppercase 常數全大寫 因為是不會改變的值，建議用全大寫，別人不須知道宣告的時候適用 const，也可以一看就知道是 const
 
-# Variable Naming Restriction 變數命名限制
+### Variable Naming Restriction 變數命名限制
 
 強制性，不這樣做就會錯
 variable name cannot start with a number! 變數不可以用數字開頭
@@ -145,12 +147,14 @@ hyphen in JS is number operator 不能用減號(hyphone)
 雖然是一種資料型態，但它不是一個原始資料型態
 
 當你需要把資料一起儲存時，它會很實用
+```js
 let friend1 = "Jonn"
 let friend2 = "Amy"
 let friend3 = "Ella"
 let friend4 = "Grace"
 
 => let friends = ["John","Amy","Ella","Grace"]
+```
 
 Property 本身就帶有的屬性
 index 索引
