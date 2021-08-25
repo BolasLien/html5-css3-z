@@ -10,7 +10,7 @@
 ### constructor function
 用 constructor function 的方式先創造「人」這個 Constructor，然後用 `new Person()` 來創造「小明」這個物件
 - Person 的 property 一定要寫在 function constructor 裡面。
-- 用 `new Person()` 創造新的物件「小明」， `this` 指的就是「小明」這個物件。
+- `this` 指的是即將被 `new Persone()` 做出來的 object。用 `new Person()` 創造的物件「小明」， `this` 就是「小明」這個物件。
 ```js
 function Person(name, age, height, weight) {
   this.name = name,
@@ -26,6 +26,7 @@ console.log(ming) // Person {name: "小明", age: 28, height: 179, weight: 70}
 
 ![](../constructor-function.jpg)
 
+### constructor and prototype
 
 人除了基本資料之外，也可以定義人會「打招呼」(methods)
 
@@ -44,8 +45,6 @@ let ming = new Person("小明", 28, 179, 70)
 
 ming.sayHi() // 小明 says hi.
 ```
-
-### constructor and prototype
 
 - 把 methods 寫在 constructor function 會產生一個問題。
 每次 `new Person`的時候，就會有新的 `sayHi()` 被分配到記憶體裡。
@@ -119,10 +118,6 @@ ming.sayHi() // 小明 says hi.
 hua.sayHi() // 小華 says hi.
 ```
 
-
-
-
-
 ---
 ## 參考
 
@@ -133,5 +128,9 @@ hua.sayHi() // 小華 says hi.
 [物件原型](https://developer.mozilla.org/zh-TW/docs/Learn/JavaScript/Objects/Object_prototypes)
 
 [JavaScript Object Prototypes](https://www.w3schools.com/js/js_object_prototypes.asp)
+
+[[筆記] 談談 JavaScript 中的 function constructor 和關鍵字 new](https://pjchender.blogspot.com/2016/06/javascriptfunction-constructornew.html)
+
+[[筆記] 談談 JavaScript 中的 function constructor 和 prototype 的建立](https://pjchender.blogspot.com/2016/06/javascriptfunction-constructorprototype.html)
 
 [[筆記] 談談JavaScript中最單純的原型繼承（prototypal inheritance）─ Object.create](https://pjchender.blogspot.com/2016/06/javascriptprototypal-inheritance.html)
